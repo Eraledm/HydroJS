@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="c_graphix/CanvasStyle.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row no-gutters" style="">
+        <div class="col-sm-6 col-md-9" id='contenedor' style="height:100vh; padding:0">
+            <canvas >Tu navegador no soporta canvas</canvas>
+        </div>
+        <div class="col-sm-6 col-md-3"  style="height:100vh; overflow:auto">
+          <h3>Ecuación de Schrödinger</h3>
+          <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d31a30a940c79442a707b1b0bb9438f765f79f4b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:32.705ex; height:6.343ex;" alt="{\displaystyle E\Psi (\mathbf {r} )=\left[{\frac {-\hbar ^{2}}{2\mu }}\nabla ^{2}+V(\mathbf {r} )\right]\Psi (\mathbf {r} )}">
+          <br><br>
+          <div class="form-check">
+            <label class="form-check-label">
+              <label for="checked_graph">&#10066; Graficos: </label>
+              <input class="form-check-input position-static" type="checkbox" id="checked_graph" value="option1" aria-label="..." checked onchange="graphs=this.checked">
+            </label>
+          </div>
+          <div class="form-group" id="form_eq">
+            <label>Ecuaciones </label><br>
+            <label><input type="radio" name="ecuacion" checked value=100> Hidrogeno ψ<sub>100</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=200> Hidrogeno ψ<sub>200</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=210> Hidrogeno ψ<sub>210</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=211> Hidrogeno ψ<sub>211</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=300> Hidrogeno ψ<sub>300</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=310> Hidrogeno ψ<sub>310</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=320> Hidrogeno ψ<sub>320</sub></label><br>
+            <label><input type="radio" name="ecuacion" value=322> Hidrogeno ψ<sub>322</sub></label><br>
+          </div>
+          <p class="lead"> &#x227B; Info Rotación</p>
+          <div id="info">
+            <p>&Theta;<sub>x</sub> = <small id="theta_x"></small></p>
+            <p>&Theta;<sub>y</sub> = <small id="theta_y"></small></p>
+            <p>&Theta;<sub>z</sub> = <small id="theta_z"></small></p>
+          </div>
+
+          <p class="lead" data-toggle="collapse" data-target="#container_particles"> &#8603; Probabilidad</p>
+          <div id="container_particles" class="collapse">
+
+          </div>
+          <p class="lead"> &#x227B; Logs</p>
+          <div id="c_logs">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+  <script src="c_graphix/math.js"></script>
+  <script src="c_graphix/Canvas.js"></script>
+  <script src="c_graphix/Matrix.js"></script>
+  <script src="c_graphix/Geometry.js"></script>
+  <script src="c_graphix/View.js"></script>
+  <script src="c_graphix/Window.js"></script>
+  <script src="c_graphix/Hidrogen.js"></script>
+  <script src="c_graphix/MainHidrogen.js"></script>
+</html>
